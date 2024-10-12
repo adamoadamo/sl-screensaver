@@ -1,0 +1,651 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		660C531C2BC2E23E00E0B910 /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 660C531A2BC2E23E00E0B910 /* thumbnail@2x.png */; };
+		660C531D2BC2E23E00E0B910 /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 660C531A2BC2E23E00E0B910 /* thumbnail@2x.png */; };
+		660C531E2BC2E23E00E0B910 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 660C531B2BC2E23E00E0B910 /* thumbnail.png */; };
+		660C531F2BC2E23E00E0B910 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 660C531B2BC2E23E00E0B910 /* thumbnail.png */; };
+		664403532BC0CAB60095A0EB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683311E2A94466100442116 /* MainView.swift */; };
+		664C730B2BC2FC2D008AA699 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ABE6D02A96D63B007D79DB /* ContentView.swift */; };
+		664C730C2BC2FC69008AA699 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D468502A942ADE0073C731 /* ScreenSaver.framework */; };
+		66721DCA2CBABDFB00AAFD3F /* Apple_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DB32CBABDFB00AAFD3F /* Apple_Walk-2.png */; };
+		66721DCB2CBABDFB00AAFD3F /* Butterfly_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DB72CBABDFB00AAFD3F /* Butterfly_Walk-3.png */; };
+		66721DCC2CBABDFB00AAFD3F /* Butterfly_Walk-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DBC2CBABDFB00AAFD3F /* Butterfly_Walk-8.png */; };
+		66721DCD2CBABDFB00AAFD3F /* Butterfly_Walk-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DBB2CBABDFB00AAFD3F /* Butterfly_Walk-7.png */; };
+		66721DCE2CBABDFB00AAFD3F /* Man_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DBF2CBABDFB00AAFD3F /* Man_Walk-3.png */; };
+		66721DCF2CBABDFB00AAFD3F /* Peanut_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC32CBABDFB00AAFD3F /* Peanut_Walk-1.png */; };
+		66721DD02CBABDFB00AAFD3F /* Butterfly_Walk-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DBA2CBABDFB00AAFD3F /* Butterfly_Walk-6.png */; };
+		66721DD12CBABDFB00AAFD3F /* Butterfly_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DB52CBABDFB00AAFD3F /* Butterfly_Walk-1.png */; };
+		66721DD22CBABDFB00AAFD3F /* Paper_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC02CBABDFB00AAFD3F /* Paper_Walk-1.png */; };
+		66721DD32CBABDFB00AAFD3F /* Paper_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC12CBABDFB00AAFD3F /* Paper_Walk-2.png */; };
+		66721DD42CBABDFB00AAFD3F /* Peanut_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC52CBABDFB00AAFD3F /* Peanut_Walk-3.png */; };
+		66721DD52CBABDFB00AAFD3F /* Peanut_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC42CBABDFB00AAFD3F /* Peanut_Walk-2.png */; };
+		66721DD62CBABDFB00AAFD3F /* Man_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DBD2CBABDFB00AAFD3F /* Man_Walk-1.png */; };
+		66721DD72CBABDFB00AAFD3F /* Apple_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DB22CBABDFB00AAFD3F /* Apple_Walk-1.png */; };
+		66721DD82CBABDFB00AAFD3F /* Man_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DBE2CBABDFB00AAFD3F /* Man_Walk-2.png */; };
+		66721DD92CBABDFB00AAFD3F /* Paper_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC22CBABDFB00AAFD3F /* Paper_Walk-3.png */; };
+		66721DDA2CBABDFB00AAFD3F /* Snake_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC62CBABDFB00AAFD3F /* Snake_Walk-1.png */; };
+		66721DDB2CBABDFB00AAFD3F /* Snake_Walk-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC92CBABDFB00AAFD3F /* Snake_Walk-4.png */; };
+		66721DDC2CBABDFB00AAFD3F /* Apple_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DB42CBABDFB00AAFD3F /* Apple_Walk-3.png */; };
+		66721DDD2CBABDFB00AAFD3F /* Butterfly_Walk-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DB92CBABDFB00AAFD3F /* Butterfly_Walk-5.png */; };
+		66721DDE2CBABDFB00AAFD3F /* Snake_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC82CBABDFB00AAFD3F /* Snake_Walk-3.png */; };
+		66721DDF2CBABDFB00AAFD3F /* Butterfly_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DB62CBABDFB00AAFD3F /* Butterfly_Walk-2.png */; };
+		66721DE02CBABDFB00AAFD3F /* Butterfly_Walk-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DB82CBABDFB00AAFD3F /* Butterfly_Walk-4.png */; };
+		66721DE12CBABDFB00AAFD3F /* Snake_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC72CBABDFB00AAFD3F /* Snake_Walk-2.png */; };
+		66721DE22CBABDFB00AAFD3F /* Apple_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DB32CBABDFB00AAFD3F /* Apple_Walk-2.png */; };
+		66721DE32CBABDFB00AAFD3F /* Butterfly_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DB72CBABDFB00AAFD3F /* Butterfly_Walk-3.png */; };
+		66721DE42CBABDFB00AAFD3F /* Butterfly_Walk-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DBC2CBABDFB00AAFD3F /* Butterfly_Walk-8.png */; };
+		66721DE52CBABDFB00AAFD3F /* Butterfly_Walk-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DBB2CBABDFB00AAFD3F /* Butterfly_Walk-7.png */; };
+		66721DE62CBABDFB00AAFD3F /* Man_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DBF2CBABDFB00AAFD3F /* Man_Walk-3.png */; };
+		66721DE72CBABDFB00AAFD3F /* Peanut_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC32CBABDFB00AAFD3F /* Peanut_Walk-1.png */; };
+		66721DE82CBABDFB00AAFD3F /* Butterfly_Walk-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DBA2CBABDFB00AAFD3F /* Butterfly_Walk-6.png */; };
+		66721DE92CBABDFB00AAFD3F /* Butterfly_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DB52CBABDFB00AAFD3F /* Butterfly_Walk-1.png */; };
+		66721DEA2CBABDFB00AAFD3F /* Paper_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC02CBABDFB00AAFD3F /* Paper_Walk-1.png */; };
+		66721DEB2CBABDFB00AAFD3F /* Paper_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC12CBABDFB00AAFD3F /* Paper_Walk-2.png */; };
+		66721DEC2CBABDFB00AAFD3F /* Peanut_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC52CBABDFB00AAFD3F /* Peanut_Walk-3.png */; };
+		66721DED2CBABDFB00AAFD3F /* Peanut_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC42CBABDFB00AAFD3F /* Peanut_Walk-2.png */; };
+		66721DEE2CBABDFB00AAFD3F /* Man_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DBD2CBABDFB00AAFD3F /* Man_Walk-1.png */; };
+		66721DEF2CBABDFB00AAFD3F /* Apple_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DB22CBABDFB00AAFD3F /* Apple_Walk-1.png */; };
+		66721DF02CBABDFB00AAFD3F /* Man_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DBE2CBABDFB00AAFD3F /* Man_Walk-2.png */; };
+		66721DF12CBABDFB00AAFD3F /* Paper_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC22CBABDFB00AAFD3F /* Paper_Walk-3.png */; };
+		66721DF22CBABDFB00AAFD3F /* Snake_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC62CBABDFB00AAFD3F /* Snake_Walk-1.png */; };
+		66721DF32CBABDFB00AAFD3F /* Snake_Walk-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC92CBABDFB00AAFD3F /* Snake_Walk-4.png */; };
+		66721DF42CBABDFB00AAFD3F /* Apple_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DB42CBABDFB00AAFD3F /* Apple_Walk-3.png */; };
+		66721DF52CBABDFB00AAFD3F /* Butterfly_Walk-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DB92CBABDFB00AAFD3F /* Butterfly_Walk-5.png */; };
+		66721DF62CBABDFB00AAFD3F /* Snake_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC82CBABDFB00AAFD3F /* Snake_Walk-3.png */; };
+		66721DF72CBABDFB00AAFD3F /* Butterfly_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DB62CBABDFB00AAFD3F /* Butterfly_Walk-2.png */; };
+		66721DF82CBABDFB00AAFD3F /* Butterfly_Walk-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DB82CBABDFB00AAFD3F /* Butterfly_Walk-4.png */; };
+		66721DF92CBABDFB00AAFD3F /* Snake_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 66721DC72CBABDFB00AAFD3F /* Snake_Walk-2.png */; };
+		66ABE6D32A96D63F007D79DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66ABE6D22A96D63F007D79DB /* Assets.xcassets */; };
+		66ABE6F82A96D6E7007D79DB /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D468502A942ADE0073C731 /* ScreenSaver.framework */; };
+		66ABE6F92A96D802007D79DB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683311E2A94466100442116 /* MainView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		660C531A2BC2E23E00E0B910 /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
+		660C531B2BC2E23E00E0B910 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		66302E992BC2E5F100A4523F /* Suerynn Screensaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Suerynn Screensaver.saver"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66302E9A2BC2E5F100A4523F /* ScreensaverPreview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreensaverPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66721DB22CBABDFB00AAFD3F /* Apple_Walk-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Apple_Walk-1.png"; sourceTree = "<group>"; };
+		66721DB32CBABDFB00AAFD3F /* Apple_Walk-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Apple_Walk-2.png"; sourceTree = "<group>"; };
+		66721DB42CBABDFB00AAFD3F /* Apple_Walk-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Apple_Walk-3.png"; sourceTree = "<group>"; };
+		66721DB52CBABDFB00AAFD3F /* Butterfly_Walk-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Butterfly_Walk-1.png"; sourceTree = "<group>"; };
+		66721DB62CBABDFB00AAFD3F /* Butterfly_Walk-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Butterfly_Walk-2.png"; sourceTree = "<group>"; };
+		66721DB72CBABDFB00AAFD3F /* Butterfly_Walk-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Butterfly_Walk-3.png"; sourceTree = "<group>"; };
+		66721DB82CBABDFB00AAFD3F /* Butterfly_Walk-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Butterfly_Walk-4.png"; sourceTree = "<group>"; };
+		66721DB92CBABDFB00AAFD3F /* Butterfly_Walk-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Butterfly_Walk-5.png"; sourceTree = "<group>"; };
+		66721DBA2CBABDFB00AAFD3F /* Butterfly_Walk-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Butterfly_Walk-6.png"; sourceTree = "<group>"; };
+		66721DBB2CBABDFB00AAFD3F /* Butterfly_Walk-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Butterfly_Walk-7.png"; sourceTree = "<group>"; };
+		66721DBC2CBABDFB00AAFD3F /* Butterfly_Walk-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Butterfly_Walk-8.png"; sourceTree = "<group>"; };
+		66721DBD2CBABDFB00AAFD3F /* Man_Walk-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Man_Walk-1.png"; sourceTree = "<group>"; };
+		66721DBE2CBABDFB00AAFD3F /* Man_Walk-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Man_Walk-2.png"; sourceTree = "<group>"; };
+		66721DBF2CBABDFB00AAFD3F /* Man_Walk-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Man_Walk-3.png"; sourceTree = "<group>"; };
+		66721DC02CBABDFB00AAFD3F /* Paper_Walk-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Paper_Walk-1.png"; sourceTree = "<group>"; };
+		66721DC12CBABDFB00AAFD3F /* Paper_Walk-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Paper_Walk-2.png"; sourceTree = "<group>"; };
+		66721DC22CBABDFB00AAFD3F /* Paper_Walk-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Paper_Walk-3.png"; sourceTree = "<group>"; };
+		66721DC32CBABDFB00AAFD3F /* Peanut_Walk-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Peanut_Walk-1.png"; sourceTree = "<group>"; };
+		66721DC42CBABDFB00AAFD3F /* Peanut_Walk-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Peanut_Walk-2.png"; sourceTree = "<group>"; };
+		66721DC52CBABDFB00AAFD3F /* Peanut_Walk-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Peanut_Walk-3.png"; sourceTree = "<group>"; };
+		66721DC62CBABDFB00AAFD3F /* Snake_Walk-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Snake_Walk-1.png"; sourceTree = "<group>"; };
+		66721DC72CBABDFB00AAFD3F /* Snake_Walk-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Snake_Walk-2.png"; sourceTree = "<group>"; };
+		66721DC82CBABDFB00AAFD3F /* Snake_Walk-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Snake_Walk-3.png"; sourceTree = "<group>"; };
+		66721DC92CBABDFB00AAFD3F /* Snake_Walk-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Snake_Walk-4.png"; sourceTree = "<group>"; };
+		6683311E2A94466100442116 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		66ABE6D02A96D63B007D79DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		66ABE6D22A96D63F007D79DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66ABE6D72A96D63F007D79DB /* ScreensaverPreview.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreensaverPreview.entitlements; sourceTree = "<group>"; };
+		66D468502A942ADE0073C731 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66ABE6C92A96D63B007D79DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66ABE6F82A96D6E7007D79DB /* ScreenSaver.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D4683A2A9427E30073C731 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				664C730C2BC2FC69008AA699 /* ScreenSaver.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66ABE6CD2A96D63B007D79DB /* ScreensaverPreview */ = {
+			isa = PBXGroup;
+			children = (
+				66ABE6D02A96D63B007D79DB /* ContentView.swift */,
+				66ABE6D22A96D63F007D79DB /* Assets.xcassets */,
+				66ABE6D72A96D63F007D79DB /* ScreensaverPreview.entitlements */,
+			);
+			path = ScreensaverPreview;
+			sourceTree = "<group>";
+		};
+		66C075EB2AA2C09300707A7D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				660C531B2BC2E23E00E0B910 /* thumbnail.png */,
+				660C531A2BC2E23E00E0B910 /* thumbnail@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		66C2FD382BC1F41D00B73D89 /* SuerynnSaver */ = {
+			isa = PBXGroup;
+			children = (
+				6683311E2A94466100442116 /* MainView.swift */,
+			);
+			path = SuerynnSaver;
+			sourceTree = "<group>";
+		};
+		66C2FD432BC1F50000B73D89 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				66721DB22CBABDFB00AAFD3F /* Apple_Walk-1.png */,
+				66721DB32CBABDFB00AAFD3F /* Apple_Walk-2.png */,
+				66721DB42CBABDFB00AAFD3F /* Apple_Walk-3.png */,
+				66721DB52CBABDFB00AAFD3F /* Butterfly_Walk-1.png */,
+				66721DB62CBABDFB00AAFD3F /* Butterfly_Walk-2.png */,
+				66721DB72CBABDFB00AAFD3F /* Butterfly_Walk-3.png */,
+				66721DB82CBABDFB00AAFD3F /* Butterfly_Walk-4.png */,
+				66721DB92CBABDFB00AAFD3F /* Butterfly_Walk-5.png */,
+				66721DBA2CBABDFB00AAFD3F /* Butterfly_Walk-6.png */,
+				66721DBB2CBABDFB00AAFD3F /* Butterfly_Walk-7.png */,
+				66721DBC2CBABDFB00AAFD3F /* Butterfly_Walk-8.png */,
+				66721DBD2CBABDFB00AAFD3F /* Man_Walk-1.png */,
+				66721DBE2CBABDFB00AAFD3F /* Man_Walk-2.png */,
+				66721DBF2CBABDFB00AAFD3F /* Man_Walk-3.png */,
+				66721DC02CBABDFB00AAFD3F /* Paper_Walk-1.png */,
+				66721DC12CBABDFB00AAFD3F /* Paper_Walk-2.png */,
+				66721DC22CBABDFB00AAFD3F /* Paper_Walk-3.png */,
+				66721DC32CBABDFB00AAFD3F /* Peanut_Walk-1.png */,
+				66721DC42CBABDFB00AAFD3F /* Peanut_Walk-2.png */,
+				66721DC52CBABDFB00AAFD3F /* Peanut_Walk-3.png */,
+				66721DC62CBABDFB00AAFD3F /* Snake_Walk-1.png */,
+				66721DC72CBABDFB00AAFD3F /* Snake_Walk-2.png */,
+				66721DC82CBABDFB00AAFD3F /* Snake_Walk-3.png */,
+				66721DC92CBABDFB00AAFD3F /* Snake_Walk-4.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		66D468332A9427E30073C731 = {
+			isa = PBXGroup;
+			children = (
+				66C2FD382BC1F41D00B73D89 /* SuerynnSaver */,
+				66ABE6CD2A96D63B007D79DB /* ScreensaverPreview */,
+				66C075EB2AA2C09300707A7D /* Resources */,
+				66C2FD432BC1F50000B73D89 /* Assets */,
+				66D4684F2A942ADE0073C731 /* Libraries */,
+				66302E992BC2E5F100A4523F /* Suerynn Screensaver.saver */,
+				66302E9A2BC2E5F100A4523F /* ScreensaverPreview.app */,
+			);
+			sourceTree = "<group>";
+		};
+		66D4684F2A942ADE0073C731 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				66D468502A942ADE0073C731 /* ScreenSaver.framework */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		66D468382A9427E30073C731 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		66ABE6CB2A96D63B007D79DB /* ScreensaverPreview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66ABE6F42A96D640007D79DB /* Build configuration list for PBXNativeTarget "ScreensaverPreview" */;
+			buildPhases = (
+				66ABE6C82A96D63B007D79DB /* Sources */,
+				66ABE6C92A96D63B007D79DB /* Frameworks */,
+				66ABE6CA2A96D63B007D79DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScreensaverPreview;
+			productName = ScreensaverPreview;
+			productReference = 66302E9A2BC2E5F100A4523F /* ScreensaverPreview.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66D4683C2A9427E30073C731 /* Suerynn Screensaver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66D468462A9427E30073C731 /* Build configuration list for PBXNativeTarget "Suerynn Screensaver" */;
+			buildPhases = (
+				66D468382A9427E30073C731 /* Headers */,
+				66D468392A9427E30073C731 /* Sources */,
+				66D4683A2A9427E30073C731 /* Frameworks */,
+				66D4683B2A9427E30073C731 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Suerynn Screensaver";
+			productName = "flex-clock";
+			productReference = 66302E992BC2E5F100A4523F /* Suerynn Screensaver.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66D468342A9427E30073C731 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					66ABE6CB2A96D63B007D79DB = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					66D4683C2A9427E30073C731 = {
+						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
+					};
+				};
+			};
+			buildConfigurationList = 66D468372A9427E30073C731 /* Build configuration list for PBXProject "Suerynn Screensaver" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66D468332A9427E30073C731;
+			productRefGroup = 66D468332A9427E30073C731;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66D4683C2A9427E30073C731 /* Suerynn Screensaver */,
+				66ABE6CB2A96D63B007D79DB /* ScreensaverPreview */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66ABE6CA2A96D63B007D79DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				660C531F2BC2E23E00E0B910 /* thumbnail.png in Resources */,
+				66ABE6D32A96D63F007D79DB /* Assets.xcassets in Resources */,
+				66721DE22CBABDFB00AAFD3F /* Apple_Walk-2.png in Resources */,
+				66721DE32CBABDFB00AAFD3F /* Butterfly_Walk-3.png in Resources */,
+				66721DE42CBABDFB00AAFD3F /* Butterfly_Walk-8.png in Resources */,
+				66721DE52CBABDFB00AAFD3F /* Butterfly_Walk-7.png in Resources */,
+				66721DE62CBABDFB00AAFD3F /* Man_Walk-3.png in Resources */,
+				66721DE72CBABDFB00AAFD3F /* Peanut_Walk-1.png in Resources */,
+				66721DE82CBABDFB00AAFD3F /* Butterfly_Walk-6.png in Resources */,
+				66721DE92CBABDFB00AAFD3F /* Butterfly_Walk-1.png in Resources */,
+				66721DEA2CBABDFB00AAFD3F /* Paper_Walk-1.png in Resources */,
+				66721DEB2CBABDFB00AAFD3F /* Paper_Walk-2.png in Resources */,
+				66721DEC2CBABDFB00AAFD3F /* Peanut_Walk-3.png in Resources */,
+				66721DED2CBABDFB00AAFD3F /* Peanut_Walk-2.png in Resources */,
+				66721DEE2CBABDFB00AAFD3F /* Man_Walk-1.png in Resources */,
+				66721DEF2CBABDFB00AAFD3F /* Apple_Walk-1.png in Resources */,
+				66721DF02CBABDFB00AAFD3F /* Man_Walk-2.png in Resources */,
+				66721DF12CBABDFB00AAFD3F /* Paper_Walk-3.png in Resources */,
+				66721DF22CBABDFB00AAFD3F /* Snake_Walk-1.png in Resources */,
+				66721DF32CBABDFB00AAFD3F /* Snake_Walk-4.png in Resources */,
+				66721DF42CBABDFB00AAFD3F /* Apple_Walk-3.png in Resources */,
+				66721DF52CBABDFB00AAFD3F /* Butterfly_Walk-5.png in Resources */,
+				66721DF62CBABDFB00AAFD3F /* Snake_Walk-3.png in Resources */,
+				66721DF72CBABDFB00AAFD3F /* Butterfly_Walk-2.png in Resources */,
+				66721DF82CBABDFB00AAFD3F /* Butterfly_Walk-4.png in Resources */,
+				66721DF92CBABDFB00AAFD3F /* Snake_Walk-2.png in Resources */,
+				660C531D2BC2E23E00E0B910 /* thumbnail@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D4683B2A9427E30073C731 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66721DCA2CBABDFB00AAFD3F /* Apple_Walk-2.png in Resources */,
+				66721DCB2CBABDFB00AAFD3F /* Butterfly_Walk-3.png in Resources */,
+				66721DCC2CBABDFB00AAFD3F /* Butterfly_Walk-8.png in Resources */,
+				66721DCD2CBABDFB00AAFD3F /* Butterfly_Walk-7.png in Resources */,
+				66721DCE2CBABDFB00AAFD3F /* Man_Walk-3.png in Resources */,
+				66721DCF2CBABDFB00AAFD3F /* Peanut_Walk-1.png in Resources */,
+				66721DD02CBABDFB00AAFD3F /* Butterfly_Walk-6.png in Resources */,
+				66721DD12CBABDFB00AAFD3F /* Butterfly_Walk-1.png in Resources */,
+				66721DD22CBABDFB00AAFD3F /* Paper_Walk-1.png in Resources */,
+				66721DD32CBABDFB00AAFD3F /* Paper_Walk-2.png in Resources */,
+				66721DD42CBABDFB00AAFD3F /* Peanut_Walk-3.png in Resources */,
+				66721DD52CBABDFB00AAFD3F /* Peanut_Walk-2.png in Resources */,
+				66721DD62CBABDFB00AAFD3F /* Man_Walk-1.png in Resources */,
+				66721DD72CBABDFB00AAFD3F /* Apple_Walk-1.png in Resources */,
+				66721DD82CBABDFB00AAFD3F /* Man_Walk-2.png in Resources */,
+				66721DD92CBABDFB00AAFD3F /* Paper_Walk-3.png in Resources */,
+				66721DDA2CBABDFB00AAFD3F /* Snake_Walk-1.png in Resources */,
+				66721DDB2CBABDFB00AAFD3F /* Snake_Walk-4.png in Resources */,
+				66721DDC2CBABDFB00AAFD3F /* Apple_Walk-3.png in Resources */,
+				66721DDD2CBABDFB00AAFD3F /* Butterfly_Walk-5.png in Resources */,
+				66721DDE2CBABDFB00AAFD3F /* Snake_Walk-3.png in Resources */,
+				66721DDF2CBABDFB00AAFD3F /* Butterfly_Walk-2.png in Resources */,
+				66721DE02CBABDFB00AAFD3F /* Butterfly_Walk-4.png in Resources */,
+				66721DE12CBABDFB00AAFD3F /* Snake_Walk-2.png in Resources */,
+				660C531C2BC2E23E00E0B910 /* thumbnail@2x.png in Resources */,
+				660C531E2BC2E23E00E0B910 /* thumbnail.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66ABE6C82A96D63B007D79DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66ABE6F92A96D802007D79DB /* MainView.swift in Sources */,
+				664C730B2BC2FC2D008AA699 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D468392A9427E30073C731 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				664403532BC0CAB60095A0EB /* MainView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		66ABE6EE2A96D640007D79DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ScreensaverPreview/ScreensaverPreview.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 83YKH78UXW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = aoreilly.ScreensaverPreview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		66ABE6EF2A96D640007D79DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ScreensaverPreview/ScreensaverPreview.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 83YKH78UXW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = aoreilly.ScreensaverPreview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		66D468442A9427E30073C731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		66D468452A9427E30073C731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		66D468472A9427E30073C731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_STYLE[sdk=*]" = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 83YKH78UXW;
+				"DEVELOPMENT_TEAM[sdk=*]" = 83YKH78UXW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 Brooklyn Museum. All rights reserved.";
+				INFOPLIST_KEY_NSPrincipalClass = MainScreenSaverView;
+				INSTALL_PATH = "/Users/adam/Documents/GitHub/flex-clock/";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brooklynmuseum.bkmbouncesaver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=*]" = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Debug;
+		};
+		66D468482A9427E30073C731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_STYLE[sdk=*]" = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 83YKH78UXW;
+				"DEVELOPMENT_TEAM[sdk=*]" = 83YKH78UXW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 Brooklyn Museum. All rights reserved.";
+				INFOPLIST_KEY_NSPrincipalClass = MainScreenSaverView;
+				INSTALL_PATH = "/Users/adam/Documents/GitHub/flex-clock/";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brooklynmuseum.bkmbouncesaver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=*]" = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66ABE6F42A96D640007D79DB /* Build configuration list for PBXNativeTarget "ScreensaverPreview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66ABE6EE2A96D640007D79DB /* Debug */,
+				66ABE6EF2A96D640007D79DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66D468372A9427E30073C731 /* Build configuration list for PBXProject "Suerynn Screensaver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66D468442A9427E30073C731 /* Debug */,
+				66D468452A9427E30073C731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66D468462A9427E30073C731 /* Build configuration list for PBXNativeTarget "Suerynn Screensaver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66D468472A9427E30073C731 /* Debug */,
+				66D468482A9427E30073C731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66D468342A9427E30073C731 /* Project object */;
+}
