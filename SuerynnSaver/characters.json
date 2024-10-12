@@ -1,0 +1,8 @@
+{
+   "Apple": ["Apple_Walk-1", "Apple_Walk-2", "Apple_Walk-3"],
+   "Butterfly": ["Butterfly_Walk-1", "Butterfly_Walk-2", "Butterfly_Walk-3", "Butterfly_Walk-4", "Butterfly_Walk-5", "Butterfly_Walk-6", "Butterfly_Walk-7", "Butterfly_Walk-8"],
+   "Man": ["Man_Walk-1", "Man_Walk-2", "Man_Walk-3"],
+   "Paper": ["Paper_Walk-1", "Paper_Walk-2", "Paper_Walk-3"],
+   "Peanut": ["Peanut_Walk-1", "Peanut_Walk-2", "Peanut_Walk-3"],
+   "Snake": ["Snake_Walk-1", "Snake_Walk-2", "Snake_Walk-3", "Snake_Walk-4"]
+}

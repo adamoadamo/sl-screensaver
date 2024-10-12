@@ -65,6 +65,8 @@
 		66ABE6D32A96D63F007D79DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66ABE6D22A96D63F007D79DB /* Assets.xcassets */; };
 		66ABE6F82A96D6E7007D79DB /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D468502A942ADE0073C731 /* ScreenSaver.framework */; };
 		66ABE6F92A96D802007D79DB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683311E2A94466100442116 /* MainView.swift */; };
+		66FFD8C12CBAF91300C03C74 /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 66FFD8C02CBAF90F00C03C74 /* characters.json */; };
+		66FFD8C22CBAF91300C03C74 /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = 66FFD8C02CBAF90F00C03C74 /* characters.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +103,7 @@
 		66ABE6D22A96D63F007D79DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66ABE6D72A96D63F007D79DB /* ScreensaverPreview.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreensaverPreview.entitlements; sourceTree = "<group>"; };
 		66D468502A942ADE0073C731 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
+		66FFD8C02CBAF90F00C03C74 /* characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,7 @@
 		66C2FD382BC1F41D00B73D89 /* SuerynnSaver */ = {
 			isa = PBXGroup;
 			children = (
+				66FFD8C02CBAF90F00C03C74 /* characters.json */,
 				6683311E2A94466100442116 /* MainView.swift */,
 			);
 			path = SuerynnSaver;
@@ -308,6 +312,7 @@
 				66721DEC2CBABDFB00AAFD3F /* Peanut_Walk-3.png in Resources */,
 				66721DED2CBABDFB00AAFD3F /* Peanut_Walk-2.png in Resources */,
 				66721DEE2CBABDFB00AAFD3F /* Man_Walk-1.png in Resources */,
+				66FFD8C12CBAF91300C03C74 /* characters.json in Resources */,
 				66721DEF2CBABDFB00AAFD3F /* Apple_Walk-1.png in Resources */,
 				66721DF02CBABDFB00AAFD3F /* Man_Walk-2.png in Resources */,
 				66721DF12CBABDFB00AAFD3F /* Paper_Walk-3.png in Resources */,
@@ -339,6 +344,7 @@
 				66721DD32CBABDFB00AAFD3F /* Paper_Walk-2.png in Resources */,
 				66721DD42CBABDFB00AAFD3F /* Peanut_Walk-3.png in Resources */,
 				66721DD52CBABDFB00AAFD3F /* Peanut_Walk-2.png in Resources */,
+				66FFD8C22CBAF91300C03C74 /* characters.json in Resources */,
 				66721DD62CBABDFB00AAFD3F /* Man_Walk-1.png in Resources */,
 				66721DD72CBABDFB00AAFD3F /* Apple_Walk-1.png in Resources */,
 				66721DD82CBABDFB00AAFD3F /* Man_Walk-2.png in Resources */,
