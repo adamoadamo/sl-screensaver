@@ -4,5 +4,7 @@
    "Man": ["Man_Walk-1", "Man_Walk-2", "Man_Walk-3"],
    "Paper": ["Paper_Walk-1", "Paper_Walk-2", "Paper_Walk-3"],
    "Peanut": ["Peanut_Walk-1", "Peanut_Walk-2", "Peanut_Walk-3"],
-   "Snake": ["Snake_Walk-1", "Snake_Walk-2", "Snake_Walk-3", "Snake_Walk-4"]
+   "Snake": ["Snake_Walk-1", "Snake_Walk-2", "Snake_Walk-3", "Snake_Walk-4"],
+   "Can": ["Can_Walk-1", "Can_Walk-2", "Can_Walk-3"],
+   "Flower": ["Flower_Walk-1", "Flower_Walk-2", "Flower_Walk-3"]
 }
