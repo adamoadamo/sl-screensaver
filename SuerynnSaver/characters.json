@@ -6,5 +6,10 @@
    "Peanut": ["Peanut_Walk-1", "Peanut_Walk-2", "Peanut_Walk-3"],
    "Snake": ["Snake_Walk-1", "Snake_Walk-2", "Snake_Walk-3", "Snake_Walk-4"],
    "Can": ["Can_Walk-1", "Can_Walk-2", "Can_Walk-3"],
-   "Flower": ["Flower_Walk-1", "Flower_Walk-2", "Flower_Walk-3"]
+   "Flower": ["Flower_Walk-1", "Flower_Walk-2", "Flower_Walk-3"],
+   "Lip": ["Lip_Walk-1", "Lip_Walk-2", "Lip_Walk-3"],
+   "Bird": ["Bird_Walk-1", "Bird_Walk-2", "Bird_Walk-3", "Bird_Walk-4", "Bird_Walk-5", "Bird_Walk-6", "Bird_Walk-7"],
+   "Pea": ["Pea_Walk-1", "Pea_Walk-2", "Pea_Walk-3"],
+   "Cry": ["Cry_Walk-1", "Cry_Walk-2", "Cry_Walk-3"],
+   "Elephant": ["Elephant_Walk-1", "Elephant_Walk-2", "Elephant_Walk-3"]
 }

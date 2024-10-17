@@ -54,7 +54,7 @@ class MainView: ScreenSaverView {
             return
         }
 
-        for (_, frames) in animations {
+        for (name, frames) in animations {
             var images: [NSImage] = []
             for frameName in frames {
                 if let image = ImageCacheManager.shared.loadImage(named: frameName) {
@@ -65,7 +65,6 @@ class MainView: ScreenSaverView {
                 characters.append(Character(position: .zero, edge: 0, angle: 0, images: images))
             }
         }
-
     }
 
     private func setupCharacters() {
@@ -171,9 +170,7 @@ class MainView: ScreenSaverView {
             }
         }
 
-        DispatchQueue.main.async {
-            self.setNeedsDisplay(self.bounds)
-        }
+        setNeedsDisplay(bounds)
     }
 
     private func animateCharacter(_ character: inout Character) {
