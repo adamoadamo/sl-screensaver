@@ -11,6 +11,12 @@
 		660C531D2BC2E23E00E0B910 /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 660C531A2BC2E23E00E0B910 /* thumbnail@2x.png */; };
 		660C531E2BC2E23E00E0B910 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 660C531B2BC2E23E00E0B910 /* thumbnail.png */; };
 		660C531F2BC2E23E00E0B910 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 660C531B2BC2E23E00E0B910 /* thumbnail.png */; };
+		6611A0082CC3EF9600704DDD /* Goo_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6611A0072CC3EF9600704DDD /* Goo_Walk-3.png */; };
+		6611A0092CC3EF9600704DDD /* Goo_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6611A0062CC3EF9600704DDD /* Goo_Walk-2.png */; };
+		6611A00A2CC3EF9600704DDD /* Goo_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6611A0052CC3EF9600704DDD /* Goo_Walk-1.png */; };
+		6611A00B2CC3EF9600704DDD /* Goo_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6611A0072CC3EF9600704DDD /* Goo_Walk-3.png */; };
+		6611A00C2CC3EF9600704DDD /* Goo_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6611A0062CC3EF9600704DDD /* Goo_Walk-2.png */; };
+		6611A00D2CC3EF9600704DDD /* Goo_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6611A0052CC3EF9600704DDD /* Goo_Walk-1.png */; };
 		661C98702CC0A1EF00F625F2 /* Bird_Walk-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 661C986C2CC0A1EF00F625F2 /* Bird_Walk-4.png */; };
 		661C98712CC0A1EF00F625F2 /* Bird_Walk-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 661C986E2CC0A1EF00F625F2 /* Bird_Walk-6.png */; };
 		661C98722CC0A1EF00F625F2 /* Bird_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 661C986A2CC0A1EF00F625F2 /* Bird_Walk-2.png */; };
@@ -122,6 +128,9 @@
 /* Begin PBXFileReference section */
 		660C531A2BC2E23E00E0B910 /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
 		660C531B2BC2E23E00E0B910 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		6611A0052CC3EF9600704DDD /* Goo_Walk-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Goo_Walk-1.png"; sourceTree = "<group>"; };
+		6611A0062CC3EF9600704DDD /* Goo_Walk-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Goo_Walk-2.png"; sourceTree = "<group>"; };
+		6611A0072CC3EF9600704DDD /* Goo_Walk-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Goo_Walk-3.png"; sourceTree = "<group>"; };
 		661C98692CC0A1EF00F625F2 /* Bird_Walk-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bird_Walk-1.png"; sourceTree = "<group>"; };
 		661C986A2CC0A1EF00F625F2 /* Bird_Walk-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bird_Walk-2.png"; sourceTree = "<group>"; };
 		661C986B2CC0A1EF00F625F2 /* Bird_Walk-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bird_Walk-3.png"; sourceTree = "<group>"; };
@@ -232,6 +241,9 @@
 		66C2FD432BC1F50000B73D89 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6611A0052CC3EF9600704DDD /* Goo_Walk-1.png */,
+				6611A0062CC3EF9600704DDD /* Goo_Walk-2.png */,
+				6611A0072CC3EF9600704DDD /* Goo_Walk-3.png */,
 				661C987E2CC0A22100F625F2 /* Cry_Walk-1.png */,
 				661C987F2CC0A22100F625F2 /* Cry_Walk-2.png */,
 				661C98802CC0A22100F625F2 /* Cry_Walk-3.png */,
@@ -442,6 +454,9 @@
 				662328892CBDC53B00E2B14D /* Can_Walk-3.png in Resources */,
 				6623288A2CBDC53B00E2B14D /* Can_Walk-1.png in Resources */,
 				6623288B2CBDC53B00E2B14D /* Can_Walk-2.png in Resources */,
+				6611A0082CC3EF9600704DDD /* Goo_Walk-3.png in Resources */,
+				6611A0092CC3EF9600704DDD /* Goo_Walk-2.png in Resources */,
+				6611A00A2CC3EF9600704DDD /* Goo_Walk-1.png in Resources */,
 				6623288C2CBDC53B00E2B14D /* Lip_Walk-2.png in Resources */,
 				6623288D2CBDC53B00E2B14D /* Lip_Walk-3.png in Resources */,
 				66721DF52CBABDFB00AAFD3F /* Butterfly_Walk-5.png in Resources */,
@@ -468,6 +483,9 @@
 				66721DCC2CBABDFB00AAFD3F /* Butterfly_Walk-8.png in Resources */,
 				66721DCD2CBABDFB00AAFD3F /* Butterfly_Walk-7.png in Resources */,
 				66721DCE2CBABDFB00AAFD3F /* Man_Walk-3.png in Resources */,
+				6611A00B2CC3EF9600704DDD /* Goo_Walk-3.png in Resources */,
+				6611A00C2CC3EF9600704DDD /* Goo_Walk-2.png in Resources */,
+				6611A00D2CC3EF9600704DDD /* Goo_Walk-1.png in Resources */,
 				66721DD02CBABDFB00AAFD3F /* Butterfly_Walk-6.png in Resources */,
 				66721DD12CBABDFB00AAFD3F /* Butterfly_Walk-1.png in Resources */,
 				66721DD22CBABDFB00AAFD3F /* Paper_Walk-1.png in Resources */,

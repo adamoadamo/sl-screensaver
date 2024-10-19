@@ -11,5 +11,6 @@
    "Bird": ["Bird_Walk-1", "Bird_Walk-2", "Bird_Walk-3", "Bird_Walk-4", "Bird_Walk-5", "Bird_Walk-6", "Bird_Walk-7"],
    "Pea": ["Pea_Walk-1", "Pea_Walk-2", "Pea_Walk-3"],
    "Cry": ["Cry_Walk-1", "Cry_Walk-2", "Cry_Walk-3"],
-   "Elephant": ["Elephant_Walk-1", "Elephant_Walk-2", "Elephant_Walk-3"]
+   "Elephant": ["Elephant_Walk-1", "Elephant_Walk-2", "Elephant_Walk-3"],
+   "Goo": ["Goo_Walk-1", "Goo_Walk-2", "Goo_Walk-3"]
 }
