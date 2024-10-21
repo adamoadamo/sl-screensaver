@@ -12,5 +12,9 @@
    "Pea": ["Pea_Walk-1", "Pea_Walk-2", "Pea_Walk-3"],
    "Cry": ["Cry_Walk-1", "Cry_Walk-2", "Cry_Walk-3"],
    "Elephant": ["Elephant_Walk-1", "Elephant_Walk-2", "Elephant_Walk-3"],
-   "Goo": ["Goo_Walk-1", "Goo_Walk-2", "Goo_Walk-3"]
+   "Goo": ["Goo_Walk-1", "Goo_Walk-2", "Goo_Walk-3"],
+   "Heart": ["Heart_Walk-1", "Heart_Walk-2", "Heart_Walk-3", "Heart_Walk-4", "Heart_Walk-5"],
+   "Balloon": ["Balloon_Walk-1", "Balloon_Walk-2", "Balloon_Walk-3"],
+   "Pant": ["Pant_Walk-1", "Pant_Walk-2", "Pant_Walk-3"],
+   "T-bone": ["T-bone_Walk-1", "T-bone_Walk-2", "T-bone_Walk-3"]
 }

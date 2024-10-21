@@ -11,6 +11,42 @@
 		660C531D2BC2E23E00E0B910 /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 660C531A2BC2E23E00E0B910 /* thumbnail@2x.png */; };
 		660C531E2BC2E23E00E0B910 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 660C531B2BC2E23E00E0B910 /* thumbnail.png */; };
 		660C531F2BC2E23E00E0B910 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 660C531B2BC2E23E00E0B910 /* thumbnail.png */; };
+		661192E32CC5DB7000CB9382 /* Heart_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192DF2CC5DB7000CB9382 /* Heart_Walk-3.png */; };
+		661192E42CC5DB7000CB9382 /* Heart_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192DD2CC5DB7000CB9382 /* Heart_Walk-1.png */; };
+		661192E52CC5DB7000CB9382 /* Heart_Walk-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192E02CC5DB7000CB9382 /* Heart_Walk-4.png */; };
+		661192E62CC5DB7000CB9382 /* Heart_Walk-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192E12CC5DB7000CB9382 /* Heart_Walk-5.png */; };
+		661192E72CC5DB7000CB9382 /* Heart_Walk-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192E22CC5DB7000CB9382 /* Heart_Walk-6.png */; };
+		661192E82CC5DB7000CB9382 /* Heart_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192DE2CC5DB7000CB9382 /* Heart_Walk-2.png */; };
+		661192E92CC5DB7000CB9382 /* Heart_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192DF2CC5DB7000CB9382 /* Heart_Walk-3.png */; };
+		661192EA2CC5DB7000CB9382 /* Heart_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192DD2CC5DB7000CB9382 /* Heart_Walk-1.png */; };
+		661192EB2CC5DB7000CB9382 /* Heart_Walk-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192E02CC5DB7000CB9382 /* Heart_Walk-4.png */; };
+		661192EC2CC5DB7000CB9382 /* Heart_Walk-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192E12CC5DB7000CB9382 /* Heart_Walk-5.png */; };
+		661192ED2CC5DB7000CB9382 /* Heart_Walk-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192E22CC5DB7000CB9382 /* Heart_Walk-6.png */; };
+		661192EE2CC5DB7000CB9382 /* Heart_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192DE2CC5DB7000CB9382 /* Heart_Walk-2.png */; };
+		661193012CC5EF8A00CB9382 /* Horse_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192F82CC5EF8A00CB9382 /* Horse_Walk-1.png */; };
+		661193032CC5EF8A00CB9382 /* Pant_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192FB2CC5EF8A00CB9382 /* Pant_Walk-1.png */; };
+		661193042CC5EF8A00CB9382 /* Pant_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192FC2CC5EF8A00CB9382 /* Pant_Walk-2.png */; };
+		661193052CC5EF8A00CB9382 /* Balloon_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192F12CC5EF8A00CB9382 /* Balloon_Walk-3.png */; };
+		661193062CC5EF8A00CB9382 /* Pant_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192FD2CC5EF8A00CB9382 /* Pant_Walk-3.png */; };
+		661193072CC5EF8A00CB9382 /* T-bone_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192FE2CC5EF8A00CB9382 /* T-bone_Walk-1.png */; };
+		661193082CC5EF8A00CB9382 /* T-bone_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192FF2CC5EF8A00CB9382 /* T-bone_Walk-2.png */; };
+		6611930A2CC5EF8A00CB9382 /* T-bone_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 661193002CC5EF8A00CB9382 /* T-bone_Walk-3.png */; };
+		6611930B2CC5EF8A00CB9382 /* Balloon_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192EF2CC5EF8A00CB9382 /* Balloon_Walk-1.png */; };
+		6611930D2CC5EF8A00CB9382 /* Horse_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192F92CC5EF8A00CB9382 /* Horse_Walk-2.png */; };
+		6611930E2CC5EF8A00CB9382 /* Balloon_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192F02CC5EF8A00CB9382 /* Balloon_Walk-2.png */; };
+		661193102CC5EF8A00CB9382 /* Horse_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192FA2CC5EF8A00CB9382 /* Horse_Walk-3.png */; };
+		661193132CC5EF8A00CB9382 /* Horse_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192F82CC5EF8A00CB9382 /* Horse_Walk-1.png */; };
+		661193152CC5EF8A00CB9382 /* Pant_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192FB2CC5EF8A00CB9382 /* Pant_Walk-1.png */; };
+		661193162CC5EF8A00CB9382 /* Pant_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192FC2CC5EF8A00CB9382 /* Pant_Walk-2.png */; };
+		661193172CC5EF8A00CB9382 /* Balloon_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192F12CC5EF8A00CB9382 /* Balloon_Walk-3.png */; };
+		661193182CC5EF8A00CB9382 /* Pant_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192FD2CC5EF8A00CB9382 /* Pant_Walk-3.png */; };
+		661193192CC5EF8A00CB9382 /* T-bone_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192FE2CC5EF8A00CB9382 /* T-bone_Walk-1.png */; };
+		6611931A2CC5EF8A00CB9382 /* T-bone_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192FF2CC5EF8A00CB9382 /* T-bone_Walk-2.png */; };
+		6611931C2CC5EF8A00CB9382 /* T-bone_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 661193002CC5EF8A00CB9382 /* T-bone_Walk-3.png */; };
+		6611931D2CC5EF8A00CB9382 /* Balloon_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192EF2CC5EF8A00CB9382 /* Balloon_Walk-1.png */; };
+		6611931F2CC5EF8A00CB9382 /* Horse_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192F92CC5EF8A00CB9382 /* Horse_Walk-2.png */; };
+		661193202CC5EF8A00CB9382 /* Balloon_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192F02CC5EF8A00CB9382 /* Balloon_Walk-2.png */; };
+		661193222CC5EF8A00CB9382 /* Horse_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 661192FA2CC5EF8A00CB9382 /* Horse_Walk-3.png */; };
 		6611A0082CC3EF9600704DDD /* Goo_Walk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6611A0072CC3EF9600704DDD /* Goo_Walk-3.png */; };
 		6611A0092CC3EF9600704DDD /* Goo_Walk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6611A0062CC3EF9600704DDD /* Goo_Walk-2.png */; };
 		6611A00A2CC3EF9600704DDD /* Goo_Walk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6611A0052CC3EF9600704DDD /* Goo_Walk-1.png */; };
@@ -128,6 +164,24 @@
 /* Begin PBXFileReference section */
 		660C531A2BC2E23E00E0B910 /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
 		660C531B2BC2E23E00E0B910 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		661192DD2CC5DB7000CB9382 /* Heart_Walk-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Heart_Walk-1.png"; sourceTree = "<group>"; };
+		661192DE2CC5DB7000CB9382 /* Heart_Walk-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Heart_Walk-2.png"; sourceTree = "<group>"; };
+		661192DF2CC5DB7000CB9382 /* Heart_Walk-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Heart_Walk-3.png"; sourceTree = "<group>"; };
+		661192E02CC5DB7000CB9382 /* Heart_Walk-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Heart_Walk-4.png"; sourceTree = "<group>"; };
+		661192E12CC5DB7000CB9382 /* Heart_Walk-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Heart_Walk-5.png"; sourceTree = "<group>"; };
+		661192E22CC5DB7000CB9382 /* Heart_Walk-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Heart_Walk-6.png"; sourceTree = "<group>"; };
+		661192EF2CC5EF8A00CB9382 /* Balloon_Walk-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Balloon_Walk-1.png"; sourceTree = "<group>"; };
+		661192F02CC5EF8A00CB9382 /* Balloon_Walk-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Balloon_Walk-2.png"; sourceTree = "<group>"; };
+		661192F12CC5EF8A00CB9382 /* Balloon_Walk-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Balloon_Walk-3.png"; sourceTree = "<group>"; };
+		661192F82CC5EF8A00CB9382 /* Horse_Walk-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Horse_Walk-1.png"; sourceTree = "<group>"; };
+		661192F92CC5EF8A00CB9382 /* Horse_Walk-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Horse_Walk-2.png"; sourceTree = "<group>"; };
+		661192FA2CC5EF8A00CB9382 /* Horse_Walk-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Horse_Walk-3.png"; sourceTree = "<group>"; };
+		661192FB2CC5EF8A00CB9382 /* Pant_Walk-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pant_Walk-1.png"; sourceTree = "<group>"; };
+		661192FC2CC5EF8A00CB9382 /* Pant_Walk-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pant_Walk-2.png"; sourceTree = "<group>"; };
+		661192FD2CC5EF8A00CB9382 /* Pant_Walk-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pant_Walk-3.png"; sourceTree = "<group>"; };
+		661192FE2CC5EF8A00CB9382 /* T-bone_Walk-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T-bone_Walk-1.png"; sourceTree = "<group>"; };
+		661192FF2CC5EF8A00CB9382 /* T-bone_Walk-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T-bone_Walk-2.png"; sourceTree = "<group>"; };
+		661193002CC5EF8A00CB9382 /* T-bone_Walk-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T-bone_Walk-3.png"; sourceTree = "<group>"; };
 		6611A0052CC3EF9600704DDD /* Goo_Walk-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Goo_Walk-1.png"; sourceTree = "<group>"; };
 		6611A0062CC3EF9600704DDD /* Goo_Walk-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Goo_Walk-2.png"; sourceTree = "<group>"; };
 		6611A0072CC3EF9600704DDD /* Goo_Walk-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Goo_Walk-3.png"; sourceTree = "<group>"; };
@@ -241,6 +295,24 @@
 		66C2FD432BC1F50000B73D89 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				661192EF2CC5EF8A00CB9382 /* Balloon_Walk-1.png */,
+				661192F02CC5EF8A00CB9382 /* Balloon_Walk-2.png */,
+				661192F12CC5EF8A00CB9382 /* Balloon_Walk-3.png */,
+				661192F82CC5EF8A00CB9382 /* Horse_Walk-1.png */,
+				661192F92CC5EF8A00CB9382 /* Horse_Walk-2.png */,
+				661192FA2CC5EF8A00CB9382 /* Horse_Walk-3.png */,
+				661192FB2CC5EF8A00CB9382 /* Pant_Walk-1.png */,
+				661192FC2CC5EF8A00CB9382 /* Pant_Walk-2.png */,
+				661192FD2CC5EF8A00CB9382 /* Pant_Walk-3.png */,
+				661192FE2CC5EF8A00CB9382 /* T-bone_Walk-1.png */,
+				661192FF2CC5EF8A00CB9382 /* T-bone_Walk-2.png */,
+				661193002CC5EF8A00CB9382 /* T-bone_Walk-3.png */,
+				661192DD2CC5DB7000CB9382 /* Heart_Walk-1.png */,
+				661192DE2CC5DB7000CB9382 /* Heart_Walk-2.png */,
+				661192DF2CC5DB7000CB9382 /* Heart_Walk-3.png */,
+				661192E02CC5DB7000CB9382 /* Heart_Walk-4.png */,
+				661192E12CC5DB7000CB9382 /* Heart_Walk-5.png */,
+				661192E22CC5DB7000CB9382 /* Heart_Walk-6.png */,
 				6611A0052CC3EF9600704DDD /* Goo_Walk-1.png */,
 				6611A0062CC3EF9600704DDD /* Goo_Walk-2.png */,
 				6611A0072CC3EF9600704DDD /* Goo_Walk-3.png */,
@@ -428,6 +500,18 @@
 				661C988A2CC0A22100F625F2 /* Cry_Walk-3.png in Resources */,
 				661C988B2CC0A22100F625F2 /* Elephant_Walk-3.png in Resources */,
 				661C988C2CC0A22100F625F2 /* Elephant_Walk-2.png in Resources */,
+				661193132CC5EF8A00CB9382 /* Horse_Walk-1.png in Resources */,
+				661193152CC5EF8A00CB9382 /* Pant_Walk-1.png in Resources */,
+				661193162CC5EF8A00CB9382 /* Pant_Walk-2.png in Resources */,
+				661193172CC5EF8A00CB9382 /* Balloon_Walk-3.png in Resources */,
+				661193182CC5EF8A00CB9382 /* Pant_Walk-3.png in Resources */,
+				661193192CC5EF8A00CB9382 /* T-bone_Walk-1.png in Resources */,
+				6611931A2CC5EF8A00CB9382 /* T-bone_Walk-2.png in Resources */,
+				6611931C2CC5EF8A00CB9382 /* T-bone_Walk-3.png in Resources */,
+				6611931D2CC5EF8A00CB9382 /* Balloon_Walk-1.png in Resources */,
+				6611931F2CC5EF8A00CB9382 /* Horse_Walk-2.png in Resources */,
+				661193202CC5EF8A00CB9382 /* Balloon_Walk-2.png in Resources */,
+				661193222CC5EF8A00CB9382 /* Horse_Walk-3.png in Resources */,
 				661C988D2CC0A22100F625F2 /* Elephant_Walk-1.png in Resources */,
 				661C988E2CC0A22100F625F2 /* Cry_Walk-1.png in Resources */,
 				661C988F2CC0A22100F625F2 /* Cry_Walk-2.png in Resources */,
@@ -454,6 +538,12 @@
 				662328892CBDC53B00E2B14D /* Can_Walk-3.png in Resources */,
 				6623288A2CBDC53B00E2B14D /* Can_Walk-1.png in Resources */,
 				6623288B2CBDC53B00E2B14D /* Can_Walk-2.png in Resources */,
+				661192E32CC5DB7000CB9382 /* Heart_Walk-3.png in Resources */,
+				661192E42CC5DB7000CB9382 /* Heart_Walk-1.png in Resources */,
+				661192E52CC5DB7000CB9382 /* Heart_Walk-4.png in Resources */,
+				661192E62CC5DB7000CB9382 /* Heart_Walk-5.png in Resources */,
+				661192E72CC5DB7000CB9382 /* Heart_Walk-6.png in Resources */,
+				661192E82CC5DB7000CB9382 /* Heart_Walk-2.png in Resources */,
 				6611A0082CC3EF9600704DDD /* Goo_Walk-3.png in Resources */,
 				6611A0092CC3EF9600704DDD /* Goo_Walk-2.png in Resources */,
 				6611A00A2CC3EF9600704DDD /* Goo_Walk-1.png in Resources */,
@@ -475,12 +565,30 @@
 				66721DCA2CBABDFB00AAFD3F /* Apple_Walk-2.png in Resources */,
 				66721DCB2CBABDFB00AAFD3F /* Butterfly_Walk-3.png in Resources */,
 				661C98842CC0A22100F625F2 /* Cry_Walk-3.png in Resources */,
+				661193012CC5EF8A00CB9382 /* Horse_Walk-1.png in Resources */,
+				661193032CC5EF8A00CB9382 /* Pant_Walk-1.png in Resources */,
+				661193042CC5EF8A00CB9382 /* Pant_Walk-2.png in Resources */,
+				661193052CC5EF8A00CB9382 /* Balloon_Walk-3.png in Resources */,
+				661193062CC5EF8A00CB9382 /* Pant_Walk-3.png in Resources */,
+				661193072CC5EF8A00CB9382 /* T-bone_Walk-1.png in Resources */,
+				661193082CC5EF8A00CB9382 /* T-bone_Walk-2.png in Resources */,
+				6611930A2CC5EF8A00CB9382 /* T-bone_Walk-3.png in Resources */,
+				6611930B2CC5EF8A00CB9382 /* Balloon_Walk-1.png in Resources */,
+				6611930D2CC5EF8A00CB9382 /* Horse_Walk-2.png in Resources */,
+				6611930E2CC5EF8A00CB9382 /* Balloon_Walk-2.png in Resources */,
+				661193102CC5EF8A00CB9382 /* Horse_Walk-3.png in Resources */,
 				661C98852CC0A22100F625F2 /* Elephant_Walk-3.png in Resources */,
 				661C98862CC0A22100F625F2 /* Elephant_Walk-2.png in Resources */,
 				661C98872CC0A22100F625F2 /* Elephant_Walk-1.png in Resources */,
 				661C98882CC0A22100F625F2 /* Cry_Walk-1.png in Resources */,
 				661C98892CC0A22100F625F2 /* Cry_Walk-2.png in Resources */,
 				66721DCC2CBABDFB00AAFD3F /* Butterfly_Walk-8.png in Resources */,
+				661192E92CC5DB7000CB9382 /* Heart_Walk-3.png in Resources */,
+				661192EA2CC5DB7000CB9382 /* Heart_Walk-1.png in Resources */,
+				661192EB2CC5DB7000CB9382 /* Heart_Walk-4.png in Resources */,
+				661192EC2CC5DB7000CB9382 /* Heart_Walk-5.png in Resources */,
+				661192ED2CC5DB7000CB9382 /* Heart_Walk-6.png in Resources */,
+				661192EE2CC5DB7000CB9382 /* Heart_Walk-2.png in Resources */,
 				66721DCD2CBABDFB00AAFD3F /* Butterfly_Walk-7.png in Resources */,
 				66721DCE2CBABDFB00AAFD3F /* Man_Walk-3.png in Resources */,
 				6611A00B2CC3EF9600704DDD /* Goo_Walk-3.png in Resources */,
