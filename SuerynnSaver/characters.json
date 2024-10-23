@@ -16,7 +16,10 @@
    "Heart": ["Heart_Walk-1", "Heart_Walk-2", "Heart_Walk-3", "Heart_Walk-4", "Heart_Walk-5"],
    "Balloon": ["Balloon_Walk-1", "Balloon_Walk-2", "Balloon_Walk-3"],
    "Pant": ["Pant_Walk-1", "Pant_Walk-2", "Pant_Walk-3"],
-   "T-bone": ["T-bone_Walk-1", "T-bone_Walk-2", "T-bone_Walk-3"],
    "Bat": ["Bat_Walk-1", "Bat_Walk-2", "Bat_Walk-3", "Bat_Walk-4", "Bat_Walk-5", "Bat_Walk-6"],
-   "Bloom": ["Bloom_Walk-1", "Bloom_Walk-2", "Bloom_Walk-3", "Bloom_Walk-4"]
+   "Bloom": ["Bloom_Walk-1", "Bloom_Walk-2", "Bloom_Walk-3", "Bloom_Walk-4"],
+   "Horse": ["Horse_Walk-1", "Horse_Walk-2", "Horse_Walk-3"],
+   "Umbrella": ["Umbrella_Walk-1", "Umbrella_Walk-2", "Umbrella_Walk-3"],
+   "Roll": ["Roll_Walk-1", "Roll_Walk-2", "Roll_Walk-3"],
+   "Paint": ["Paint_Walk-1", "Paint_Walk-2", "Paint_Walk-3", "Paint_Walk-4"]
 }

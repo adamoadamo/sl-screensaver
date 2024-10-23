@@ -42,9 +42,9 @@ class MainView: ScreenSaverView {
     }
     private let cornerRadius: CGFloat = 120.0 // Updated radius to 100
     private let frameDelay: Int = 4
-    private var edgeOffset: CGFloat = 0.0 // Set to 0.0 to avoid misalignment
+    private var edgeOffset: CGFloat = -5.0 // Set to 0.0 to avoid misalignment
     private var charactersInitialized = false
-    private let minDistance: CGFloat = 150.0 // Minimum distance between characters
+    private let minDistance: CGFloat = 100.0 // Minimum distance between characters
 
     override init?(frame: NSRect, isPreview: Bool) {
         super.init(frame: frame, isPreview: isPreview)
