@@ -43,7 +43,7 @@ struct ScreensaverViewRepresentable: NSViewRepresentable {
     
     func makeNSView(context: Context) -> NSView {
         // Replace 'MainScreenSaverView' with the actual class of your screensaver
-        let screensaverView = MainView(frame: NSRect(x: 0, y: 0, width: 800, height: 600), isPreview: true)
+        let screensaverView = MainView(frame: .zero, isPreview: true)
         screensaverView?.startAnimation()
         return screensaverView ?? NSView()
     }
