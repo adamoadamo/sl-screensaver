@@ -95,22 +95,16 @@ class MainView: ScreenSaverView {
     private var displayLink: CVDisplayLink?
     private var lastFrameTime: TimeInterval = 0
     private let targetFrameInterval: TimeInterval = 1.0 / 30.0  // Match original animation interval
-    private let maxActiveCharacters = 8
-    private var availableCharacterTypes: Set<String> = []
-    private var activeCharacterTypes: Set<String> = []
-    private var fadeTimer: Timer?
-    private let fadeInterval: TimeInterval = 7.5  // Average between 5-10 seconds
-    private let fadeAnimationDuration: TimeInterval = 3.0  // Extended duration for visible fade
 
     // Define percentages as constants
     private struct ScreenPercentages {
-        static let characterSize: CGFloat = 0.275     // 27.5% of smaller screen dimension
-        static let cornerRadius: CGFloat = 0.225       // 22.5% of smaller screen dimension
+        static let characterSize: CGFloat = 0.275     // 15.5% of smaller screen dimension
+        static let cornerRadius: CGFloat = 0.225       // 12.5% of smaller screen dimension
         static let edgeOffset: CGFloat = -0.0045       // -0.45% of smaller screen dimension
-        static let minDistance: CGFloat = 0.375        // 37.5% of smaller screen dimension
-        static let edgeSpeed: CGFloat = 0.0015         // 0.15% of smaller screen dimension per frame
+        static let minDistance: CGFloat = 0.45          // Increased from 0.45 to 0.65
+        static let edgeSpeed: CGFloat = 0.0015        // 0.2% of smaller screen dimension per frame
         static let cornerSpeedMultiplier: CGFloat = 5.5  // Multiplier for corner speed relative to edge speed
-        static let frameDelay: Int = 5                 // Number of frames to wait before advancing animation
+        static let frameDelay: Int = 7                 // Number of frames to wait before advancing animation
     }
 
     // Computed properties based on screen size
@@ -142,27 +136,68 @@ class MainView: ScreenSaverView {
         return smallerScreenDimension * ScreenPercentages.edgeSpeed
     }
 
-    override init?(frame: NSRect, isPreview: Bool) {
-        super.init(frame: frame, isPreview: isPreview)
-        commonInit()
+    private var cornerSpeed: CGFloat {
+        return edgeSpeed * ScreenPercentages.cornerSpeedMultiplier
     }
 
-    required init?(coder decoder: NSCoder) {
-        super.init(coder: decoder)
+    // Add frameDelay as a computed property
+    private var frameDelay: Int {
+        return ScreenPercentages.frameDelay
+    }
+
+    // Rename from 'animations' to 'characterAnimations'
+    private let characterAnimations: [String: [String]] = [
+        "Apple": ["Apple_Walk-1", "Apple_Walk-2", "Apple_Walk-3"],
+        "Butterfly": ["Butterfly_Walk-1", "Butterfly_Walk-2", "Butterfly_Walk-3", "Butterfly_Walk-4", "Butterfly_Walk-5", "Butterfly_Walk-6", "Butterfly_Walk-7", "Butterfly_Walk-8"],
+        "Man": ["Man_Walk-1", "Man_Walk-2", "Man_Walk-3"],
+        "Paper": ["Paper_Walk-1", "Paper_Walk-2", "Paper_Walk-3"],
+        "Peanut": ["Peanut_Walk-1", "Peanut_Walk-2", "Peanut_Walk-3"],
+        "Can": ["Can_Walk-1", "Can_Walk-2", "Can_Walk-3"],
+        "Lip": ["Lip_Walk-1", "Lip_Walk-2", "Lip_Walk-3"],
+        "Bird": ["Bird_Walk-1", "Bird_Walk-2", "Bird_Walk-3", "Bird_Walk-4", "Bird_Walk-5", "Bird_Walk-6", "Bird_Walk-7"],
+        "Pea": ["Pea_Walk-1", "Pea_Walk-2", "Pea_Walk-3"],
+        "Cry": ["Cry_Walk-1", "Cry_Walk-2", "Cry_Walk-3"],
+        "Elephant": ["Elephant_Walk-1", "Elephant_Walk-2", "Elephant_Walk-3"],
+        "Goo": ["Goo_Walk-1", "Goo_Walk-2", "Goo_Walk-3"],
+        "Balloon": ["Balloon_Walk-1", "Balloon_Walk-2", "Balloon_Walk-3"],
+        "Pant": ["Pant_Walk-1", "Pant_Walk-2", "Pant_Walk-3"],
+        "Bat": ["Bat_Walk-1", "Bat_Walk-2", "Bat_Walk-3", "Bat_Walk-4", "Bat_Walk-5", "Bat_Walk-6"],
+        "Horse": ["Horse_Walk-1", "Horse_Walk-2", "Horse_Walk-3"],
+        "Umbrella": ["Umbrella_Walk-1", "Umbrella_Walk-2", "Umbrella_Walk-3"],
+        "Roll": ["Roll_Walk-1", "Roll_Walk-2", "Roll_Walk-3"],
+        "Paint": ["Paint_Walk-1", "Paint_Walk-2", "Paint_Walk-3", "Paint_Walk-4"],
+    ]
+
+    private var hasInitializedPositions = false
+    private let maxActiveCharacters = 7
+    private var availableCharacterTypes: Set<String> = []
+    private var activeCharacterTypes: Set<String> = []
+    private var fadeTimer: Timer?
+    private let fadeInterval: TimeInterval = 20  // Average between 5-10 seconds
+
+    @objc override init?(frame: NSRect, isPreview: Bool) {
+        NSLog("🟢 MainView init starting")
+        super.init(frame: frame, isPreview: isPreview)
+        commonInit()
+        setupDisplayLink()
+    }
+
+    @objc required init?(coder: NSCoder) {
+        super.init(coder: coder)
         commonInit()
     }
 
     private func commonInit() {
+        NSLog("🟢 Starting commonInit")
         loadImages()
-        setupDisplayLink()
-        setupFadeTimer()
+        NSLog("🟢 Finished commonInit")
     }
 
     private func loadImages() {
         NSLog("🟢 Starting loadImages")
         characters = []
         availableCharacterTypes = Set(characterAnimations.keys)
-        activeCharacterTypes = []
+        activeCharacterTypes = Set()
 
         // Randomly select initial characters
         let initialCharacters = Array(characterAnimations.keys).shuffled().prefix(maxActiveCharacters)
@@ -183,7 +218,7 @@ class MainView: ScreenSaverView {
                         edge: 0,
                         angle: 0,
                         images: images,
-                        opacity: 1.0,
+                        opacity: 0.0,  // Start fully transparent
                         isActive: true,
                         characterType: characterName
                     ))
@@ -195,7 +230,7 @@ class MainView: ScreenSaverView {
         }
 
         NSLog("🟢 Finished loadImages with \(characters.count) active characters")
-        initializeCharacterPositions()
+        setupFadeTimer()
     }
 
     private func setupFadeTimer() {
@@ -205,168 +240,122 @@ class MainView: ScreenSaverView {
     }
 
     private func rotateRandomCharacter() {
-        guard let characterToRemove = characters.filter({ $0.isActive }).randomElement(),
-              let newCharacterType = availableCharacterTypes.randomElement() else {
+        // Don't select characters that are currently fading
+        guard let characterToRemove = characters.filter({ $0.isActive && $0.opacity == 1.0 }).randomElement(),
+              !availableCharacterTypes.isEmpty else {
             return
         }
 
-        // Start fade out for the selected character
+        // Get list of available characters excluding the one being removed
+        let validNewTypes = availableCharacterTypes.filter { $0 != characterToRemove.characterType }
+        guard let newCharacterType = validNewTypes.randomElement() else {
+            return
+        }
+
+        NSLog("🔄 Rotating: removing \(characterToRemove.characterType), will add \(newCharacterType)")
+        
         startFadeAnimation(for: characterToRemove.characterType, fadingIn: false) { [weak self] in
             guard let self = self else { return }
-
-            // Remove the character
+            
+            // Remove the character from the array after fade out
             if let index = self.characters.firstIndex(where: { $0.characterType == characterToRemove.characterType }) {
                 self.characters.remove(at: index)
-                self.activeCharacterTypes.remove(characterToRemove.characterType)
-                self.availableCharacterTypes.insert(characterToRemove.characterType)
-                NSLog("🗑 Removed character \(characterToRemove.characterType)")
             }
+            
+            self.activeCharacterTypes.remove(characterToRemove.characterType)
+            self.availableCharacterTypes.insert(characterToRemove.characterType)
 
-            // Add new character with a delay of 1-2 seconds
-            self.addNewCharacter(ofType: newCharacterType, delay: Double.random(in: 1.0...2.0))
-        }
-    }
-
-    private func addNewCharacter(ofType type: String, delay: Double) {
-        guard availableCharacterTypes.contains(type),
-              let frames = characterAnimations[type] else {
-            return
-        }
-
-        var images: [NSImage] = []
-        for frameName in frames {
-            if let image = imageCache.loadImage(named: frameName) {
-                images.append(image)
+            let delay = TimeInterval.random(in: 2...4)
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                self.addNewCharacter(ofType: newCharacterType)
             }
-        }
-
-        if images.isEmpty {
-            NSLog("❌ No images found for character \(type)")
-            return
-        }
-
-        // Generate a new position ensuring no overlap
-        let screenWidth = bounds.width
-        let screenHeight = bounds.height
-        let offset = smallerScreenDimension * ScreenPercentages.edgeOffset
-
-        var newPosition: CGPoint
-        var angle: CGFloat
-        var edge: Int
-        var isValidPosition = false
-        var attempts = 0
-
-        repeat {
-            attempts += 1
-            edge = Int.random(in: 0...3)
-
-            switch edge {
-            case 0: // Bottom edge
-                let posAlongEdge = CGFloat.random(in: 0...screenWidth)
-                newPosition = CGPoint(x: posAlongEdge, y: offset)
-                angle = 0
-            case 1: // Right edge
-                let posAlongEdge = CGFloat.random(in: 0...screenHeight)
-                newPosition = CGPoint(x: screenWidth - offset, y: posAlongEdge)
-                angle = CGFloat.pi / 2
-            case 2: // Top edge
-                let posAlongEdge = CGFloat.random(in: 0...screenWidth)
-                newPosition = CGPoint(x: posAlongEdge, y: screenHeight - offset)
-                angle = CGFloat.pi
-            case 3: // Left edge
-                let posAlongEdge = CGFloat.random(in: 0...screenHeight)
-                newPosition = CGPoint(x: offset, y: posAlongEdge)
-                angle = 3 * CGFloat.pi / 2
-            default:
-                newPosition = .zero
-                angle = 0
-            }
-
-            // Check minimum distance from other characters
-            isValidPosition = true
-            for existingCharacter in self.characters {
-                let distance = hypot(newPosition.x - existingCharacter.position.x,
-                                     newPosition.y - existingCharacter.position.y)
-                if distance < self.minDistance + self.imageSize {
-                    isValidPosition = false
-                    break
-                }
-            }
-
-            if attempts > 100 {
-                NSLog("⚠️ Too many attempts for new character position, placing without strict distance")
-                isValidPosition = true
-            }
-        } while !isValidPosition
-
-        NSLog("📍 Generated position for new character '\(type)': x=\(newPosition.x), y=\(newPosition.y), edge=\(edge)")
-
-        let newCharacter = Character(
-            position: newPosition,
-            edge: edge,
-            angle: angle,
-            images: images,
-            opacity: 1.0,
-            isActive: true,
-            characterType: type
-        )
-
-        // Add new character after a specified delay
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
-            guard let self = self else { return }
-            self.characters.append(newCharacter)
-            self.activeCharacterTypes.insert(type)
-            self.availableCharacterTypes.remove(type)
-            NSLog("✨ Added new character \(type) at position \(newPosition)")
         }
     }
 
     private func startFadeAnimation(for characterType: String, fadingIn: Bool, completion: (() -> Void)? = nil) {
-        let duration: TimeInterval = fadeAnimationDuration  // Duration of fade in/out
-        let steps = 60  // Increased steps for smoother fade
+        let duration: TimeInterval = 0.5
+        let steps = 30
         let stepDuration = duration / Double(steps)
         var currentStep = 0
 
-        Timer.scheduledTimer(withTimeInterval: stepDuration, repeats: true) { timer in
-            currentStep += 1
-            let progress = CGFloat(currentStep) / CGFloat(steps)
+        NSLog("🎭 Starting fade \(fadingIn ? "in" : "out") animation for \(characterType)")
 
-            DispatchQueue.main.async {
-                if let index = self.characters.firstIndex(where: { $0.characterType == characterType }) {
-                    if fadingIn {
-                        self.characters[index].opacity = min(self.characters[index].opacity + (1.0 / CGFloat(steps)), 1.0)
-                    } else {
-                        self.characters[index].opacity = max(self.characters[index].opacity - (1.0 / CGFloat(steps)), 0.0)
-                    }
-                    self.needsDisplay = true
-
-                    if currentStep >= steps {
-                        timer.invalidate()
-                        completion?()
-                    }
-                } else {
-                    timer.invalidate()
-                    completion?()
-                }
+        Timer.scheduledTimer(withTimeInterval: stepDuration, repeats: true) { [weak self] timer in
+            guard let self = self else {
+                timer.invalidate()
+                return
             }
+
+            currentStep += 1
+            
+            if let index = self.characters.firstIndex(where: { $0.characterType == characterType }) {
+                let newOpacity: CGFloat
+                if fadingIn {
+                    newOpacity = min(CGFloat(currentStep) / CGFloat(steps), 1.0)
+                } else {
+                    newOpacity = max(1.0 - (CGFloat(currentStep) / CGFloat(steps)), 0.0)
+                }
+                
+                self.characters[index].opacity = newOpacity
+                NSLog("👻 \(characterType) opacity now: \(newOpacity)")
+                
+                DispatchQueue.main.async {
+                    self.needsDisplay = true
+                }
+            } else {
+                NSLog("⚠️ Character not found for fade animation: \(characterType)")
+                timer.invalidate()
+                return
+            }
+
+            if currentStep >= steps {
+                NSLog("✅ Fade \(fadingIn ? "in" : "out") complete for \(characterType)")
+                timer.invalidate()
+                completion?()
+            }
+        }
+    }
+
+    override func draw(_ rect: NSRect) {
+        super.draw(rect)
+
+        // Initialize positions if we haven't yet and have valid dimensions
+        if !hasInitializedPositions && bounds.width > 0 && bounds.height > 0 {
+            NSLog("📏 Initializing positions with dimensions: \(bounds.width) x \(bounds.height)")
+            initializeCharacterPositions()
+            hasInitializedPositions = true
+        }
+
+        // Draw characters
+        for (index, character) in characters.enumerated() {
+            NSLog("🎨 Drawing character \(index) at position: \(character.position)")
+            drawCharacter(character)
         }
     }
 
     private func drawCharacter(_ character: Character) {
         guard let context = NSGraphicsContext.current?.cgContext else { return }
-
+        
         context.saveGState()
+        
+        // Move to position and rotate
         context.translateBy(x: character.position.x, y: character.position.y)
         context.rotate(by: character.angle)
 
         if character.images.indices.contains(character.currentFrame) {
             let image = character.images[character.currentFrame]
+            let rect = CGRect(x: -imageSize / 2, y: 0, width: imageSize, height: imageSize)
+            
+            // Create a new graphics context with the opacity
+            NSGraphicsContext.saveGraphicsState()
             context.setAlpha(character.opacity)
-            image.draw(in: CGRect(x: -imageSize / 2, y: -imageSize / 2, width: imageSize, height: imageSize), from: .zero, operation: .sourceOver, fraction: 1.0)
-        } else {
-            print("Warning: Current frame index out of bounds.")
+            
+            // Draw the image with the current opacity
+            image.draw(in: rect, from: .zero, operation: .sourceOver, fraction: character.opacity)
+            
+            NSGraphicsContext.restoreGraphicsState()
         }
-
+        
         context.restoreGState()
     }
 
@@ -387,94 +376,11 @@ class MainView: ScreenSaverView {
         }
     }
 
-    private func setupCharacters() {
-        // Only run if we haven't initialized and now have valid bounds
-        if !charactersInitialized && bounds.width > 0 && bounds.height > 0 {
-            let screenWidth = bounds.width
-            let screenHeight = bounds.height
-            let startPositions = generateNonOverlappingPositions(screenWidth: screenWidth, screenHeight: screenHeight)
-
-            // Update positions for any characters that weren't properly positioned initially
-            for (index, start) in startPositions.enumerated() {
-                if index < characters.count {
-                    characters[index].position = start.position
-                    characters[index].edge = start.edge
-                    characters[index].angle = start.angle
-                }
-            }
-
-            charactersInitialized = true
-        }
-    }
-
-    private func generateNonOverlappingPositions(screenWidth: CGFloat, screenHeight: CGFloat) -> [(position: CGPoint, edge: Int, angle: CGFloat)] {
-        NSLog("🎲 Generating positions for screen: \(screenWidth) x \(screenHeight)")
-        var positions: [(position: CGPoint, edge: Int, angle: CGFloat)] = []
-        let numberOfCharacters = characters.count
-        let offset = smallerScreenDimension * ScreenPercentages.edgeOffset  // Use the same offset calculation as movement
-
-        for i in 0..<numberOfCharacters {
-            var newPosition: CGPoint
-            var angle: CGFloat
-            var edge: Int
-            var isValidPosition: Bool
-            var attempts = 0
-
-            repeat {
-                attempts += 1
-                edge = Int.random(in: 0...3)
-
-                switch edge {
-                case 0: // Bottom edge
-                    let posAlongEdge = CGFloat.random(in: 0...screenWidth)
-                    newPosition = CGPoint(x: posAlongEdge, y: offset)
-                    angle = 0
-                case 1: // Right edge
-                    let posAlongEdge = CGFloat.random(in: 0...screenHeight)
-                    newPosition = CGPoint(x: screenWidth - offset, y: posAlongEdge)
-                    angle = CGFloat.pi / 2
-                case 2: // Top edge
-                    let posAlongEdge = CGFloat.random(in: 0...screenWidth)
-                    newPosition = CGPoint(x: posAlongEdge, y: screenHeight - offset)
-                    angle = CGFloat.pi
-                case 3: // Left edge
-                    let posAlongEdge = CGFloat.random(in: 0...screenHeight)
-                    newPosition = CGPoint(x: offset, y: posAlongEdge)
-                    angle = 3 * CGFloat.pi / 2
-                default:
-                    newPosition = .zero
-                    angle = 0
-                }
-
-                // Check minimum distance from other characters
-                isValidPosition = true
-                for existingPosition in positions {
-                    let distance = hypot(newPosition.x - existingPosition.position.x,
-                                         newPosition.y - existingPosition.position.y)
-                    if distance < minDistance + imageSize {
-                        isValidPosition = false
-                        break
-                    }
-                }
-
-                if attempts > 100 {
-                    NSLog("⚠️ Too many attempts for position \(i), using last generated position")
-                    isValidPosition = true
-                }
-            } while !isValidPosition
-
-            NSLog("📍 Generated position \(i): x=\(newPosition.x), y=\(newPosition.y), edge=\(edge)")
-            positions.append((position: newPosition, edge: edge, angle: angle))
-        }
-        
-        return positions
-    }
-
     private func animateCharacter(_ character: inout Character) {
         character.frameDelayCounter += 1
-        if character.frameDelayCounter >= ScreenPercentages.frameDelay {
-            character.frameDelayCounter = 0
+        if character.frameDelayCounter >= frameDelay {
             character.currentFrame = (character.currentFrame + 1) % character.images.count
+            character.frameDelayCounter = 0
         }
     }
 
@@ -491,9 +397,9 @@ class MainView: ScreenSaverView {
                         x: bounds.width - cornerRadius - edgeOffset,
                         y: cornerRadius + edgeOffset
                     )
-                    let startAngle: CGFloat = 0
-                    let endAngle: CGFloat = CGFloat.pi / 2
-                    let angleIncrement = computeAngleIncrement(startAngle: startAngle, endAngle: endAngle, speed: ScreenPercentages.edgeSpeed * ScreenPercentages.cornerSpeedMultiplier)
+                    let startAngle: CGFloat = 3 * CGFloat.pi / 2
+                    let endAngle: CGFloat = 2 * CGFloat.pi
+                    let angleIncrement = computeAngleIncrement(startAngle: startAngle, endAngle: endAngle, speed: cornerSpeed)
                     character.state = .movingAlongCorner(
                         arcCenter: arcCenter,
                         endAngle: endAngle,
@@ -510,9 +416,9 @@ class MainView: ScreenSaverView {
                         x: bounds.width - cornerRadius - edgeOffset,
                         y: bounds.height - cornerRadius - edgeOffset
                     )
-                    let startAngle: CGFloat = CGFloat.pi / 2
-                    let endAngle: CGFloat = CGFloat.pi
-                    let angleIncrement = computeAngleIncrement(startAngle: startAngle, endAngle: endAngle, speed: ScreenPercentages.edgeSpeed * ScreenPercentages.cornerSpeedMultiplier)
+                    let startAngle: CGFloat = 0
+                    let endAngle: CGFloat = CGFloat.pi / 2
+                    let angleIncrement = computeAngleIncrement(startAngle: startAngle, endAngle: endAngle, speed: cornerSpeed)
                     character.state = .movingAlongCorner(
                         arcCenter: arcCenter,
                         endAngle: endAngle,
@@ -529,9 +435,9 @@ class MainView: ScreenSaverView {
                         x: cornerRadius + edgeOffset,
                         y: bounds.height - cornerRadius - edgeOffset
                     )
-                    let startAngle: CGFloat = CGFloat.pi
-                    let endAngle: CGFloat = 3 * CGFloat.pi / 2
-                    let angleIncrement = computeAngleIncrement(startAngle: startAngle, endAngle: endAngle, speed: ScreenPercentages.edgeSpeed * ScreenPercentages.cornerSpeedMultiplier)
+                    let startAngle: CGFloat = CGFloat.pi / 2
+                    let endAngle: CGFloat = CGFloat.pi
+                    let angleIncrement = computeAngleIncrement(startAngle: startAngle, endAngle: endAngle, speed: cornerSpeed)
                     character.state = .movingAlongCorner(
                         arcCenter: arcCenter,
                         endAngle: endAngle,
@@ -550,7 +456,7 @@ class MainView: ScreenSaverView {
                     )
                     let startAngle: CGFloat = CGFloat.pi
                     let endAngle: CGFloat = 3 * CGFloat.pi / 2
-                    let angleIncrement = computeAngleIncrement(startAngle: startAngle, endAngle: endAngle, speed: ScreenPercentages.edgeSpeed * ScreenPercentages.cornerSpeedMultiplier)
+                    let angleIncrement = computeAngleIncrement(startAngle: startAngle, endAngle: endAngle, speed: cornerSpeed)
                     character.state = .movingAlongCorner(
                         arcCenter: arcCenter,
                         endAngle: endAngle,
@@ -561,9 +467,17 @@ class MainView: ScreenSaverView {
             default:
                 break
             }
+
         case .movingAlongCorner(let arcCenter, let endAngle, var currentAngle, let angleIncrement):
-            currentAngle += angleIncrement
-            let finishedTurning = (angleIncrement > 0 && currentAngle >= endAngle) || (angleIncrement < 0 && currentAngle <= endAngle)
+            // Adjust angleIncrement to prevent overshooting
+            let remainingAngle = endAngle - currentAngle
+            let direction: CGFloat = angleIncrement >= 0 ? 1 : -1
+            let absIncrement = abs(angleIncrement)
+            let absRemaining = abs(remainingAngle)
+            let adjustedIncrement = absIncrement > absRemaining ? direction * absRemaining : angleIncrement
+            currentAngle += adjustedIncrement
+
+            let finishedTurning = (angleIncrement >= 0 && currentAngle >= endAngle) || (angleIncrement < 0 && currentAngle <= endAngle)
 
             if finishedTurning {
                 currentAngle = endAngle
@@ -650,13 +564,213 @@ class MainView: ScreenSaverView {
         fadeTimer?.invalidate()
     }
 
-    override func draw(_ rect: NSRect) {
-        super.draw(rect)
+    private func initializeCharacterPositions() {
+        NSLog("🎯 Initializing character positions")
+        let screenWidth = bounds.width
+        let screenHeight = bounds.height
 
-        guard let context = NSGraphicsContext.current?.cgContext else { return }
+        NSLog("📏 Screen dimensions: \(screenWidth) x \(screenHeight)")
 
-        for character in characters {
-            drawCharacter(character)
+        let startPositions = generateNonOverlappingPositions(screenWidth: screenWidth, screenHeight: screenHeight)
+
+        for (index, position) in startPositions.enumerated() {
+            if index < characters.count {
+                characters[index].position = position.position
+                characters[index].edge = position.edge
+                characters[index].angle = position.angle
+                NSLog("📍 Positioned character \(index) at: \(position.position)")
+                
+                // Start fade in animation for each character with a slight delay
+                let delay = Double(index) * 0.75  // Stagger the fade-ins
+                DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+                    self?.startFadeAnimation(for: self?.characters[index].characterType ?? "", fadingIn: true)
+                }
+            }
+        }
+
+        NSLog("✅ Finished positioning \(characters.count) characters")
+    }
+
+    private func setupCharacters() {
+        // Only run if we haven't initialized and now have valid bounds
+        if !charactersInitialized && bounds.width > 0 && bounds.height > 0 {
+            let screenWidth = bounds.width
+            let screenHeight = bounds.height
+            let startPositions = generateNonOverlappingPositions(screenWidth: screenWidth, screenHeight: screenHeight)
+
+            // Update positions for any characters that weren't properly positioned initially
+            for (index, start) in startPositions.enumerated() {
+                if index < characters.count {
+                    characters[index].position = start.position
+                    characters[index].edge = start.edge
+                    characters[index].angle = start.angle
+                }
+            }
+
+            charactersInitialized = true
+        }
+    }
+
+    private func generateNonOverlappingPositions(screenWidth: CGFloat, screenHeight: CGFloat) -> [(position: CGPoint, edge: Int, angle: CGFloat)] {
+        NSLog("🎲 Generating positions for screen: \(screenWidth) x \(screenHeight)")
+        var positions: [(position: CGPoint, edge: Int, angle: CGFloat)] = []
+        let numberOfCharacters = characters.count
+        let offset = smallerScreenDimension * ScreenPercentages.edgeOffset  // Use the same offset calculation as movement
+
+        for i in 0..<numberOfCharacters {
+            var newPosition: CGPoint
+            var angle: CGFloat
+            var edge: Int
+            var isValidPosition: Bool
+            var attempts = 0
+
+            repeat {
+                attempts += 1
+                isValidPosition = true
+                edge = Int.random(in: 0...3)
+
+                switch edge {
+                case 0: // Bottom edge
+                    let posAlongEdge = CGFloat.random(in: 0...screenWidth)
+                    newPosition = CGPoint(x: posAlongEdge, y: offset)
+                    angle = 0
+                case 1: // Right edge
+                    let posAlongEdge = CGFloat.random(in: 0...screenHeight)
+                    newPosition = CGPoint(x: screenWidth - offset, y: posAlongEdge)
+                    angle = CGFloat.pi / 2
+                case 2: // Top edge
+                    let posAlongEdge = CGFloat.random(in: 0...screenWidth)
+                    newPosition = CGPoint(x: posAlongEdge, y: screenHeight - offset)
+                    angle = CGFloat.pi
+                case 3: // Left edge
+                    let posAlongEdge = CGFloat.random(in: 0...screenHeight)
+                    newPosition = CGPoint(x: offset, y: posAlongEdge)
+                    angle = 3 * CGFloat.pi / 2
+                default:
+                    newPosition = .zero
+                    angle = 0
+                }
+
+                // Check minimum distance from other characters
+                for existingPosition in positions {
+                    let distance = hypot(newPosition.x - existingPosition.position.x,
+                                         newPosition.y - existingPosition.position.y)
+                    if distance < minDistance {
+                        isValidPosition = false
+                        break
+                    }
+                }
+
+                if attempts > 100 {
+                    NSLog("⚠️ Too many attempts for position \(i), using last generated position")
+                    isValidPosition = true
+                }
+
+            } while !isValidPosition
+
+            NSLog("📍 Generated position \(i): x=\(newPosition.x), y=\(newPosition.y), edge=\(edge)")
+            positions.append((position: newPosition, edge: edge, angle: angle))
+        }
+        
+        return positions
+    }
+
+    private func addNewCharacter(ofType type: String) {
+        guard availableCharacterTypes.contains(type),
+              let frames = characterAnimations[type] else {
+            NSLog("❌ Cannot add character: type not available or no frames found")
+            return
+        }
+
+        NSLog("📥 Loading images for new character: \(type)")
+        var images: [NSImage] = []
+        for frameName in frames {
+            if let image = imageCache.loadImage(named: frameName) {
+                images.append(image)
+            }
+        }
+
+        if images.isEmpty {
+            NSLog("❌ No images loaded for character \(type)")
+            return
+        }
+
+        // Generate a new position ensuring no overlap
+        let screenWidth = bounds.width
+        let screenHeight = bounds.height
+        let offset = smallerScreenDimension * ScreenPercentages.edgeOffset
+
+        var newPosition: CGPoint
+        var angle: CGFloat
+        var edge: Int
+        var isValidPosition = false
+        var attempts = 0
+        let maxAttempts = 200  // Increased from 100 to 200
+
+        repeat {
+            attempts += 1
+            edge = Int.random(in: 0...3)
+
+            switch edge {
+            case 0: // Bottom edge
+                let posAlongEdge = CGFloat.random(in: 0...screenWidth)
+                newPosition = CGPoint(x: posAlongEdge, y: offset)
+                angle = 0
+            case 1: // Right edge
+                let posAlongEdge = CGFloat.random(in: 0...screenHeight)
+                newPosition = CGPoint(x: screenWidth - offset, y: posAlongEdge)
+                angle = CGFloat.pi / 2
+            case 2: // Top edge
+                let posAlongEdge = CGFloat.random(in: 0...screenWidth)
+                newPosition = CGPoint(x: posAlongEdge, y: screenHeight - offset)
+                angle = CGFloat.pi
+            case 3: // Left edge
+                let posAlongEdge = CGFloat.random(in: 0...screenHeight)
+                newPosition = CGPoint(x: offset, y: posAlongEdge)
+                angle = 3 * CGFloat.pi / 2
+            default:
+                newPosition = .zero
+                angle = 0
+            }
+
+            // More thorough overlap check
+            isValidPosition = true
+            for existingCharacter in self.characters {
+                let distance = hypot(newPosition.x - existingCharacter.position.x, 
+                                     newPosition.y - existingCharacter.position.y)
+                
+                // Add a buffer zone around the minimum distance
+                let safeDistance = self.minDistance * 1.1
+                if distance < safeDistance {
+                    isValidPosition = false
+                    break
+                }
+            }
+
+            if attempts > maxAttempts {
+                NSLog("⚠️ Could not find non-overlapping position after \(maxAttempts) attempts")
+                return  // Instead of using potentially overlapping position, skip adding the character
+            }
+        } while !isValidPosition
+
+        // Only proceed if we found a valid position
+        if isValidPosition {
+            let newCharacter = Character(
+                position: newPosition,
+                edge: edge,
+                angle: angle,
+                images: images,
+                opacity: 0.0,
+                isActive: true,
+                characterType: type
+            )
+
+            characters.append(newCharacter)
+            activeCharacterTypes.insert(type)
+            availableCharacterTypes.remove(type)
+            
+            NSLog("✨ Added new character \(type) at position: \(newPosition)")
+            startFadeAnimation(for: type, fadingIn: true)
         }
     }
 }
